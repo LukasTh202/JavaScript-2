@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executando DOM</title>
+    <style>
+        body {
+            background-color: darkblue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <br>
+    <div id="msg">Clique em mim</div>
+    <br>
+
+    <div name="farao">Sou faraó sou faraó</div>
+
+    <div class="pina">Larissa eu te amo</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        corpo.style.background = 'Green'
+        p1.style.color= 'Red'
+
+        var d = window.document.getElementById('msg')
+        d.style.background= 'purple'
+        d.innerText = 'Estou aguardando amigo'
+        // window.document.getElementById('msg').innerText = 'Olá'
+        
+        var r = window.document.getElementsByName('farao')[0]
+        r.style.background = 'Black'
+
+        var l = window.document.querySelector('div#msg')
+        l.style.background = 'Yellow'
+
+
+
+    </script>
+
+
+</body>
+
+</html>
